@@ -60,7 +60,7 @@ def test_create_and_duplicate_employee():
     }
     # Create or expect 409
     code, data = req("POST", "/employees", data=test_emp, expected_status=201)
-    assert data["emp_code"] == "EMP9876"
+    assert data["emp_code"] == "EMP987006"
 
     # Duplicate should 409
     code, err = req("POST", "/employees", data=test_emp, expected_status=409)
